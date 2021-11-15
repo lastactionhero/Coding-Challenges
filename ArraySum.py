@@ -3,7 +3,7 @@
 import numpy as np
 from sqlalchemy import null
 # %%
-given_array = np.array([1,1,3,7,2,4,9,2])
+given_array = np.array([1,3,7,4,9,2])
 target = 11
 # %%
 def find_second_position(first_num,target,arr):
