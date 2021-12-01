@@ -19,3 +19,26 @@ print(water)
 h=[1,2,3,4,5,6,7,8,9]
 h[2:9]
 # %%
+# optimized solution
+height = [0,1,0,2,0,0,4]
+water, left, maxleft, maxright = 0,0,0,0
+right = len(height)-1
+
+while(left < right):
+    if(height[left] <= height[right]):
+        if(height[left] >= maxleft):
+            maxleft=height[left]
+        else:
+            water+= maxleft - height[left]
+        left+=1
+    else:
+        if(height[right] >= maxright):
+            maxright=height[right]
+        else:
+            water+= maxright - height[right]
+        right-=1
+ 
+print(f'{water}')
+
+
+# %%
