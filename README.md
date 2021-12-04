@@ -6,6 +6,4 @@ I would like to try out solutions to coding challenges I came across. Please let
 2) Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of the line i is at (i, ai) and (i, 0). Find two lines, which, together with the x-axis forms a container, such that the container contains the most water.
 3) Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 4) Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
-
-Note that after backspacing an empty text, the text will continue empty.
-<a>https://leetcode.com/problems/backspace-string-compare/<a>
+Note that after backspacing an empty text, the text will continue empty.<a>https://leetcode.com/problems/backspace-string-compare/<a>
