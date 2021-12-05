@@ -7,3 +7,4 @@ I would like to try out solutions to coding challenges I came across. Please let
 3) Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.
 4) Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
 Note that after backspacing an empty text, the text will continue empty.<a>https://leetcode.com/problems/backspace-string-compare/<a>
+5) Longest substring we can form without repeating characters e.g. "abcbdca" - abc, cbd, bdca are substrings without repeating characters. Longest has length 4. <a>https://leetcode.com/problems/longest-substring-without-repeating-characters/<a>
