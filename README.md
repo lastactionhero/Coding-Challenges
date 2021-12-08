@@ -8,3 +8,5 @@ I would like to try out solutions to coding challenges I came across. Please let
 4) Given two strings s and t, return true if they are equal when both are typed into empty text editors. '#' means a backspace character.
 Note that after backspacing an empty text, the text will continue empty.<a>https://leetcode.com/problems/backspace-string-compare/<a>
 5) Longest substring we can form without repeating characters e.g. "abcbdca" - abc, cbd, bdca are substrings without repeating characters. Longest has length 4. <a>https://leetcode.com/problems/longest-substring-without-repeating-characters/<a>
+6) Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+<a>https://leetcode.com/problems/reverse-linked-list-ii/<a>
