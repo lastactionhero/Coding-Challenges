@@ -10,3 +10,10 @@ Note that after backspacing an empty text, the text will continue empty.<a>https
 5) Longest substring we can form without repeating characters e.g. "abcbdca" - abc, cbd, bdca are substrings without repeating characters. Longest has length 4. <a>https://leetcode.com/problems/longest-substring-without-repeating-characters/<a>
 6) Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
 <a>https://leetcode.com/problems/reverse-linked-list-ii/<a>
+7) Given are the 2 sorted arrays. Calculate median for cobmbined sorted array. 
+Input 
+a=[1,3,5]
+b=[2,4,6]
+Output
+Median = 3.5
+Combined array = [1, 2, 3, 4, 5, 6]
