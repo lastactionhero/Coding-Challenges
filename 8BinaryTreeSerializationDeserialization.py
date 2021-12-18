@@ -1,32 +1,6 @@
 #%%
 import pickle
-#%%
-# This class is responsible for serializing tree, 
-# deserializing and constructing tree
-class Transporter:
-    def builtTree(self, arr):
-        r = None
-        for num in inputArray:
-            if r is None:
-                r = Node(num)
-            else:
-                r.insertNode(num)
-        return r
-    
-    def serializeTree(self, root):
-        result = root.inorderTraversal(root)
-        file = open('Tree.txt', mode='wb')
-        pickle.dump(result, file)
-        file.close() 
-    
-    def deserializeTree(self):
-        file = open('Tree.txt', mode='rb')
-        result = pickle.load(file)
-        file.close()
-        return self.builtTree(result)
-    
-    
-
+import sys
 # this is tree node with inorder traversal
 class Node:
     def __init__(self, data:int):
@@ -63,23 +37,68 @@ class Node:
             result += self.inorderTraversal(root.left)
             result += self.inorderTraversal(root.right)
         return result
-        
-  
+    
+    def inorderTraversalNodeList(self, root):
+        result = []
+        if(root is not None):
+            result.append(root)
+            result += self.inorderTraversalNodeList(root.left)
+            result += self.inorderTraversalNodeList(root.right)
+        return result
 
+# This class is responsible for serializing tree, 
+# deserializing and constructing tree
+class Transporter:
+    def printError(self):
+        type, value, traceback = sys.exc_info()
+        print(f'{type}, {value}, {traceback}')
+    
+    # Serialize tree node objects, with in-order traversal. This way root will be first object.
+    def serializeTree(self, root):
+        try:
+            result = root.inorderTraversalNodeList(root)
+        except:
+            printError()
+            return
+        
+        try:
+            with open('Tree.txt', mode='wb') as file :
+                pickle.dump(result, file) 
+        except:
+            printError()
+        finally:
+            file.close()
+    # Here we deserialize list of node objects of tree. 
+    # They have already referencing each other at the time of serialization.
+    # Hence deserialize all objects and return only first one (root)        
+    def deserializeTree(self):
+        try:
+            with open('Tree.txt', mode='rb') as file:
+                result = pickle.load(file)
+        except:
+            printError()
+        finally:
+            file.close()
+
+        return result[0]
+    
+ 
 # %% Built tree from input array
-inputArray = [5, 3, 2, 10, 7]
+inputArray = [20, 40, 10, 60, 80, 30]
 r = None
 for num in inputArray:
-    print(num)
     if r is None:
         r = Node(num)
     else:
         r.insertNode(num)
+
+print(f'This is the b-tree sent to serialization - \n{r.inorderTraversal(r)}')
 
 t = Transporter()
 # Serialize
 t.serializeTree(r)
 # deserialize into tree node
 root = t.deserializeTree()
-# check deserialization
-print(root.inorderTraversal(root))
+print(f'This is the b-tree retrieved after deserialization - \n{root.inorderTraversal(root)}')
+
+# %%

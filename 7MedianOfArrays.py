@@ -1,7 +1,7 @@
 # %%
 # Input
-a=[1]
-b=[2,4,6]
+a=[1,3,5,10]
+b=[2,4,6, 7, 8]
 
 # Solution
 # Calculate lengths of arrays and total lenght of both arrays combined
@@ -44,7 +44,7 @@ while((p1+p2)<l):
     if ((p1+p2+1) == middle2) and (midnum2 is None):
         midnum2 = smallerNum
     # If smaller numner is from first array increase p1 pointer else go increase p2 pointer
-    if ((p1)<al) and (a[p1]<b[p2]):
+    if ((p1)<al) and  ( (p2==bl) or (a[p1]<b[p2])  ):
         p1+=1
     else:
         if((p2)<bl):
@@ -52,6 +52,8 @@ while((p1+p2)<l):
 
 Median = (midnum1 + midnum2)/2
 
+print(f'Array 1 - {a}')
+print(f'Array 2 - {b}')
 print(f'Median is - {Median}')
 print(f'Combined array is - {arr}')
 # %%
