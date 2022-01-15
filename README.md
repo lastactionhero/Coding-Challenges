@@ -17,3 +17,4 @@ b=[2,4,6]
 Output
 Median = 3.5
 Combined array = [1, 2, 3, 4, 5, 6]
+8) Serialize and deserialize binary tree. Make sure not to reconstruct tree again in deserialization process.
