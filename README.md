@@ -19,7 +19,15 @@ Median = 3.5
 Combined array = [1, 2, 3, 4, 5, 6]
 8) Serialize and deserialize binary tree. Make sure not to reconstruct tree again in deserialization process.. 
 9) Largest product continuous subarray of integers.
-
+10) Given a Roman numeral as input, your task is to find its corresponding integer value and output it. Roman Numerals are represented by combinations of letters from the Latin alphabet.
+ALPHABET           VALUE
+I                   1
+V                   5
+X                   10
+L                   50
+C                   100 
+D                   500
+M                   1000  
 -) You are given a doubly linked list, which contains nodes that have a next pointer, a previous pointer, and an additional child pointer. This child pointer may or may not point to a separate doubly linked list, also containing these special nodes. These child lists may have one or more children of their own.
 Given the head of the first level of the list, flatten the list so that all the nodes appear in a single-level, doubly linked list. Let curr be a node with a child list. The nodes in the child list should appear after curr and before curr.next in the flattened list.
 <a>https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/<a>
