@@ -28,6 +28,11 @@ L                   50
 C                   100 
 D                   500
 M                   1000  
+11) Move all 0s in array to the end.
+e.g. 
+Input: A[] = {1, 8, 3, 0, 2, 0, 1, 10, 13, 0}
+Output: {1, 8, 3, 2, 1, 10, 13, 0, 0, 0}
+
 -) You are given a doubly linked list, which contains nodes that have a next pointer, a previous pointer, and an additional child pointer. This child pointer may or may not point to a separate doubly linked list, also containing these special nodes. These child lists may have one or more children of their own.
 Given the head of the first level of the list, flatten the list so that all the nodes appear in a single-level, doubly linked list. Let curr be a node with a child list. The nodes in the child list should appear after curr and before curr.next in the flattened list.
 <a>https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/<a>
